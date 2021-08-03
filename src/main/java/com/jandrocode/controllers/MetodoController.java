@@ -51,8 +51,8 @@ public class MetodoController {
     }
 
     @DeleteMapping("/eliminar/{id}")
-    public void eliminarCategoria(@PathVariable Long id){
-        categoriaService.eliminarCategoria(id);
+    public void eliminarMetodo(@PathVariable Long id){
+        metodoService.eliminarMetodo(id);
     }
 
 }

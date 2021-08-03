@@ -28,4 +28,9 @@ public class MetodoService {
     public Metodo guardarMetodo(Metodo metodo){
         return metodoDAO.save(metodo);
     }
+
+    public void eliminarMetodo(Long id){
+        metodoDAO.deleteById(id);
+
+    }
 }
