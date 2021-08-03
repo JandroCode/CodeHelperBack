@@ -48,6 +48,11 @@ public class MetodoController {
         metodoEncontrado.setUrl(metodo.getUrl());
 
         return  metodoService.guardarMetodo(metodoEncontrado);
-
     }
+
+    @DeleteMapping("/eliminar/{id}")
+    public void eliminarCategoria(@PathVariable Long id){
+        categoriaService.eliminarCategoria(id);
+    }
+
 }
