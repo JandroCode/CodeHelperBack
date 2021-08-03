@@ -25,6 +25,7 @@ public class MetodoController {
         return metodoService.listadoMetodos();
     }
 
+    //GUARDAR MÉTODOS
     @PostMapping("/guardar-metodo/{id}")
     public Metodo guardarMetodo(@RequestBody Metodo metodo, @PathVariable Long id){
 
@@ -35,6 +36,7 @@ public class MetodoController {
         return method;
     }
 
+    //BUSCAR MÉTODOS POR ID
     @GetMapping("/{id}")
     public Metodo buscarPorId(@PathVariable Long id){
         return metodoService.buscarMetodoPorId(id);
@@ -50,6 +52,7 @@ public class MetodoController {
         return  metodoService.guardarMetodo(metodoEncontrado);
     }
 
+    //ELIMINAR MÉTODOS
     @DeleteMapping("/eliminar/{id}")
     public void eliminarMetodo(@PathVariable Long id){
         metodoService.eliminarMetodo(id);

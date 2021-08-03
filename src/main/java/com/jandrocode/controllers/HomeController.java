@@ -35,7 +35,9 @@ public class HomeController {
 	public List<Categoria> getCategorias(){
 		return categoriaService.listadoCategorias();
 	}
-	
+
+
+	//GUARDAR CATEGORÍAS
 	@PostMapping("/guardar-categoria")
 	public ResponseEntity<?> guardarCategoria(@RequestBody Categoria categoria){
 		
@@ -54,11 +56,13 @@ public class HomeController {
 		return new ResponseEntity<Categoria>(cat, HttpStatus.OK);
 	}
 
+	//BUSCAR MÉTODOS
 	@GetMapping("/buscar/{id}/{nombreMetodo}")
 	public List <Metodo> buscadorMetodos(@PathVariable Long id, @PathVariable String nombreMetodo){
 		return metodoService.buscadorMetodos(id,nombreMetodo);
 	}
 
+	//ACTUALIZAR CATEGORÍAS
 	@PutMapping("/actualizar/{id}")
 	public Categoria actualizarCategoria(@RequestBody Categoria categoria, @PathVariable Long id){
 

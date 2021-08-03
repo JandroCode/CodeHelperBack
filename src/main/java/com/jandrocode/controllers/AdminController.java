@@ -25,21 +25,26 @@ public class AdminController {
     @Autowired
     private MetodoService metodoService;
 
+
+    //LISTAR CATEGORÍAS
     @GetMapping("/listado-categorias")
     public List<Categoria> categoriasListado(){
         return categoriaService.listadoCategorias();
     }
 
+    //LISTAR MÉTODOS
     @GetMapping("/listado-metodos")
     public List<Metodo> metodosListado(){
         return metodoService.listadoMetodos();
     }
 
+    //ELIMINAR MÉTODOS
     @DeleteMapping("/eliminar/{id}")
     public void eliminarCategoria(@PathVariable Long id){
         categoriaService.eliminarCategoria(id);
     }
 
+    //BUSCAR CATEGORÍAS
     @GetMapping("/buscar-categoria/{id}")
     public ResponseEntity <?> buscarCategoria(@PathVariable Long id){
 
